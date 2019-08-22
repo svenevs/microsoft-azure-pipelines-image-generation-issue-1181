@@ -5,28 +5,28 @@ jobs:
       vmImage: ubuntu-16.04
     steps:
       - script: |
-        pip install cmake ninja
-        mkdir build && cd build
-        cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
-        ninja
-        ./runme
+          pip install cmake ninja
+          mkdir build && cd build
+          cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+          ninja
+          ./runme
   - job: macOS_10.13
     pool:
       vmImage: macOS-10.13
     steps:
       - script: |
-        pip install cmake ninja
-        mkdir build && cd build
-        cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
-        ninja
-        ./runme
+          pip install cmake ninja
+          mkdir build && cd build
+          cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+          ninja
+          ./runme
   - job: macOS_10.14
     pool:
       vmImage: macOS-10.14
     steps:
       - script: |
-        pip install cmake ninja
-        mkdir build && cd build
-        cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
-        ninja
-        ./runme
+          pip install cmake ninja
+          mkdir build && cd build
+          cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
+          ninja
+          ./runme
