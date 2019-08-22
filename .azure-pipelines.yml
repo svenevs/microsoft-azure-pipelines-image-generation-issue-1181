@@ -10,7 +10,7 @@ jobs:
           cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
           ninja
           ./runme
-  - job: macOS_10.13
+  - job: macOS_10_13
     pool:
       vmImage: macOS-10.13
     steps:
@@ -20,7 +20,7 @@ jobs:
           cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release
           ninja
           ./runme
-  - job: macOS_10.14
+  - job: macOS_10_14
     pool:
       vmImage: macOS-10.14
     steps:
