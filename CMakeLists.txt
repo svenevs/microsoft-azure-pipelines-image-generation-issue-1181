@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 project(testlib)
 
-add_library(testlib src/testlib.hpp src/other.cpp)
+add_library(testlib src/testlib.hpp)
 target_include_directories(testlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 if (APPLE)
@@ -12,6 +12,8 @@ if (APPLE)
     message(FATAL_ERROR "Cocoa library not found.")
   endif()
   target_link_libraries(testlib PUBLIC ${Cocoa_library})
+else()
+  target_sources(testlib PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/other.cpp)
 endif()
 
 add_executable(runme src/runme.cpp)
