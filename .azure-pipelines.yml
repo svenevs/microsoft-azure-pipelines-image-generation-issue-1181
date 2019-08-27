@@ -18,6 +18,7 @@ jobs:
       vmImage: macOS-10.13
     steps:
       - script: |
+          export SDKROOT="$(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
           python3 -m venv venv
           source venv/bin/activate
           pip install cmake ninja
@@ -30,6 +31,7 @@ jobs:
       vmImage: macOS-10.14
     steps:
       - script: |
+          export SDKROOT="$(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
           python3 -m venv venv
           source venv/bin/activate
           pip install cmake ninja
